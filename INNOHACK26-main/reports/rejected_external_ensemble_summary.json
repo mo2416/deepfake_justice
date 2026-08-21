@@ -1,0 +1,16 @@
+{
+  "status": "rejected",
+  "reason": "The experimental ensemble did not generalize on the external social-video sanity set and is not used by the application.",
+  "evaluation_set": {
+    "description": "External multiview social-video sanity set",
+    "videos": 198
+  },
+  "results": {
+    "resnet": {"roc_auc": 0.51516, "accuracy": 0.51515, "balanced_accuracy": 0.52108},
+    "efficientnet_b4": {"roc_auc": 0.50490},
+    "vit": {"roc_auc": 0.46387},
+    "r3d": {"roc_auc": 0.52679},
+    "ensemble": {"roc_auc": 0.53455, "accuracy": 0.53535, "balanced_accuracy": 0.54353}
+  },
+  "privacy_note": "Per-file results and local filesystem paths are intentionally excluded."
+}

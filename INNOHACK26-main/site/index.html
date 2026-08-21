@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DeepGuard — notebook-first deepfake detection and digital evidence authentication.">
+  <meta property="og:title" content="DeepGuard | Digital Evidence Authentication">
+  <meta property="og:description" content="Deepfake video screening, multi-face analysis, evidence hashing and forensic reporting.">
+  <title>DeepGuard | Digital Evidence Authentication</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grid" aria-hidden="true"></div>
+  <nav>
+    <a class="brand" href="#top"><span class="brand-mark">DG</span><span>DEEPGUARD<small>FORENSIC ENGINE v3.0</small></span></a>
+    <div class="nav-links">
+      <a href="#system">System</a><a href="#results">Results</a><a href="#notebooks">Notebooks</a>
+      <a class="button small" href="https://github.com/RAGU-NAN-DHAN/INNOHACK26">View code</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">AIML-02 · FORENSIC SCREENING SYSTEM</p>
+        <h1>Detect manipulation.<br><span>Preserve the evidence.</span></h1>
+        <p class="lede">Deepfake image and video screening with multi-face analysis, suspicious timestamps, SHA-256 evidence hashing and analyst-friendly reports.</p>
+        <div class="actions"><a class="button" href="#scanner">Try interface</a><a class="text-link" href="#results">View verified results →</a></div>
+        <div class="status"><i></i> Prototype saved and reproducible on GitHub</div>
+      </div>
+      <div class="terminal" aria-label="System overview">
+        <div class="terminal-bar"><span></span><span></span><span></span><b>FORENSIC_PIPELINE.LOG</b></div>
+        <div class="terminal-body">
+          <p><em>01</em> INGEST MEDIA + SHA-256</p><p><em>02</em> DETECT ALL VISIBLE FACES</p>
+          <p><em>03</em> SAMPLE VIDEO TIMELINE</p><p><em>04</em> CLASSIFY FACE REGIONS</p>
+          <p><em>05</em> AGGREGATE + CALIBRATE</p><p><em>06</em> GENERATE EVIDENCE REPORT</p>
+          <div class="terminal-ready">SYSTEM READY<span class="cursor"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="scanner" class="scanner-section">
+      <div class="section-head"><p class="eyebrow">INTERFACE PREVIEW</p><h2>Forensic media scanner</h2><p>Preview the secure scanning interface here. Use the hosted authenticated application for real model analysis.</p></div>
+      <label class="dropzone" id="dropzone" for="fileInput">
+        <input id="fileInput" type="file" accept="image/*" hidden>
+        <div id="emptyState"><div class="upload-icon">+</div><strong>Upload an image to preview the scan</strong><span>PNG, JPG, JPEG or WEBP</span></div>
+        <div id="previewState" class="preview-state" hidden><img id="preview" alt="Uploaded media preview"><div class="scan-line"></div><div class="corners"></div></div>
+      </label>
+      <div class="scan-actions"><button class="button" id="scanButton" disabled>Run interface scan</button><span id="scanStatus">Waiting for media</span></div>
+      <div class="demo-note" id="demoNote" hidden><strong>INTERFACE CHECK COMPLETE</strong><span>This showcase does not fabricate a verdict. Continue to the authenticated DeepGuard application for real model inference.</span><a href="https://github.com/RAGU-NAN-DHAN/INNOHACK26#quick-start">Open authenticated application →</a></div>
+    </section>
+
+    <section class="application-output">
+      <div class="section-head"><p class="eyebrow">SAME FORENSIC INTERFACE</p><h2>What the working application reports.</h2></div>
+      <div class="app-preview">
+        <div class="preview-kicker">ACTUAL APPLICATION OUTPUT</div>
+        <div class="verdict-row"><div><small>ANALYSIS COMPLETE</small><h3>LIKELY AUTHENTIC</h3></div><span class="online-pill">MODEL ONLINE</span></div>
+        <div class="result-cards"><article><strong>08.4%</strong><span>SCREENING SCORE</span></article><article><strong>91.6%</strong><span>CONFIDENCE</span></article><article><strong>07</strong><span>FACES</span></article></div>
+        <div class="evidence-grid"><div><small>DETECTED FACES</small><div class="face-row"><i>01</i><i>02</i><i>03</i><i>04</i><i>05</i><i>06</i><i>07</i></div></div><div><small>VIDEO FORENSICS</small><div class="timeline"><span></span><span></span><span></span><span></span><span></span><span></span></div></div></div>
+        <div class="hash-preview"><small>EVIDENCE SHA-256</small><code>4346e304c5cb18edf87d46be06091d0378e0f7b411693e88e7c12d9f015ad376</code></div>
+        <p class="legal-note">Automated screening aid only. Preserve the original file and obtain qualified forensic review before legal or judicial reliance.</p>
+      </div>
+    </section>
+
+    <section id="results" class="results-section">
+      <div class="section-head"><p class="eyebrow">LOCKED ACTOR-DISJOINT TEST</p><h2>Measured, not manufactured.</h2><p>EfficientNet-B4 evaluated on 130 held-out DFD videos. Actors in the test set were excluded from training.</p></div>
+      <div class="metrics">
+        <article><span>97.78%</span><b>Video ROC-AUC</b><small>ranking performance</small></article>
+        <article><span>89.23%</span><b>Video accuracy</b><small>locked test split</small></article>
+        <article><span>89.85%</span><b>Balanced accuracy</b><small>class-balanced metric</small></article>
+        <article><span>130</span><b>Held-out videos</b><small>57 TN · 2 FP · 12 FN · 59 TP</small></article>
+      </div>
+      <p class="caveat">These numbers apply to the documented DFD evaluation split; they are not a claim of universal real-world accuracy.</p>
+    </section>
+
+    <section id="system" class="system-section">
+      <div class="section-head"><p class="eyebrow">FORENSIC WORKFLOW</p><h2>More than a binary classifier.</h2></div>
+      <div class="feature-grid">
+        <article><b>01</b><h3>Multi-face analysis</h3><p>Detects and evaluates visible faces individually instead of collapsing a group image into one crop.</p></article>
+        <article><b>02</b><h3>Video timeline</h3><p>Samples frames across the clip and surfaces suspicious moments with timestamps.</p></article>
+        <article><b>03</b><h3>Evidence integrity</h3><p>Records SHA-256 hashes and media properties to support repeatable review.</p></article>
+        <article><b>04</b><h3>Reversible profiles</h3><p>Switches between the DFD candidate and the previous model without destroying the rollback path.</p></article>
+      </div>
+    </section>
+
+    <section id="notebooks" class="notebook-section">
+      <div class="section-head"><p class="eyebrow">NOTEBOOK-FIRST SUBMISSION</p><h2>Inspect every stage, cell by cell.</h2></div>
+      <div class="notebook-list">
+        <a href="https://github.com/RAGU-NAN-DHAN/INNOHACK26/blob/main/notebooks/01_datasets_and_training.ipynb"><span>01</span><b>Datasets & initial training</b><i>Open notebook ↗</i></a>
+        <a href="https://github.com/RAGU-NAN-DHAN/INNOHACK26/blob/main/notebooks/02_inference_pipeline.ipynb"><span>02</span><b>Inference pipeline</b><i>Open notebook ↗</i></a>
+        <a href="https://github.com/RAGU-NAN-DHAN/INNOHACK26/blob/main/notebooks/03_streamlit_app.ipynb"><span>03</span><b>Streamlit application</b><i>Open notebook ↗</i></a>
+        <a href="https://github.com/RAGU-NAN-DHAN/INNOHACK26/blob/main/notebooks/04_dfd_video_training.ipynb"><span>04</span><b>DFD video training</b><i>Open notebook ↗</i></a>
+        <a href="https://github.com/RAGU-NAN-DHAN/INNOHACK26/blob/main/notebooks/05_website_and_rollback.ipynb"><span>05</span><b>Website & rollback</b><i>Open notebook ↗</i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#top"><span class="brand-mark">DG</span><span>DEEPGUARD<small>FORENSIC ENGINE v3.0</small></span></a><p>Automated screening aid—not a substitute for qualified forensic review.</p><a href="https://github.com/RAGU-NAN-DHAN/INNOHACK26">GitHub repository ↗</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>

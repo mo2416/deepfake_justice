@@ -1,0 +1,46 @@
+{
+  "hits": 2,
+  "total": 4,
+  "results": [
+    {
+      "file": "real_merkel.jpg",
+      "expected": "REAL",
+      "actual": "REAL",
+      "score": 0.18603515625,
+      "conf": 0.6279296875,
+      "hit": true,
+      "elapsed_ms": 781.1079025268555,
+      "desc": "Real photo (Merkel, Wikimedia)"
+    },
+    {
+      "file": "real_emma.jpg",
+      "expected": "REAL",
+      "actual": "FAKE",
+      "score": 0.962890625,
+      "conf": 0.92578125,
+      "hit": false,
+      "elapsed_ms": 32.09519386291504,
+      "desc": "Real photo (Emma Watson, Wikimedia)"
+    },
+    {
+      "file": "fake_stylegan_grid.png",
+      "expected": "FAKE",
+      "actual": "REAL",
+      "score": 0.352294921875,
+      "conf": 0.29541015625,
+      "hit": false,
+      "elapsed_ms": 63.036203384399414,
+      "desc": "StyleGAN2 teaser (NVIDIA)"
+    },
+    {
+      "file": "fake_stylegan3.png",
+      "expected": "FAKE",
+      "actual": "FAKE",
+      "score": 0.96484375,
+      "conf": 0.9296875,
+      "hit": true,
+      "elapsed_ms": 283.74385833740234,
+      "desc": "StyleGAN3 teaser (NVIDIA)"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local application state and secrets
+deepfake.db
+*.db-journal
+.streamlit/secrets.toml
+.env
+*.log
+*.err
+
+# Raw datasets, extracted frames and generated training artifacts
+data/
+artifacts/
+*.zip
+*.7z
+*.tar
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+
+# Local reports/cache
+uploads/
+scratch/
+.cache/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+
+tmp/
+
+# Large model files (LFS pointers - skip for now)
+*.pt
+*.pth
+*.onnx

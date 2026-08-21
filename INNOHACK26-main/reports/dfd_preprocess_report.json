@@ -1,0 +1,19 @@
+{
+  "videos": 2115,
+  "frames": {
+    "train": {
+      "real": 988,
+      "fake": 6536
+    },
+    "val": {
+      "real": 228,
+      "fake": 188
+    },
+    "test": {
+      "real": 236,
+      "fake": 284
+    }
+  },
+  "seconds": 1071.5584371089935,
+  "policy": "actor-disjoint; cross-pool manipulated pairs excluded"
+}

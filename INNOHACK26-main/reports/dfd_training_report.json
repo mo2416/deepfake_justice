@@ -1,0 +1,35 @@
+{
+  "passed_deployment_gate": true,
+  "gate": "test balanced accuracy and AUC >= 0.85",
+  "best_val": {
+    "frame_auc": 0.8476810377006345,
+    "video_auc": 0.9167599850690555,
+    "video_accuracy": 0.8942307692307693,
+    "video_balanced_accuracy": 0.8941769316909294,
+    "threshold": 0.515,
+    "videos": 104,
+    "confusion": {
+      "tn": 51,
+      "fp": 6,
+      "fn": 5,
+      "tp": 42
+    }
+  },
+  "test": {
+    "frame_auc": 0.9191632847935068,
+    "video_auc": 0.9777989973740749,
+    "video_accuracy": 0.8923076923076924,
+    "video_balanced_accuracy": 0.8985438052041059,
+    "threshold": 0.515,
+    "videos": 130,
+    "confusion": {
+      "tn": 57,
+      "fp": 2,
+      "fn": 12,
+      "tp": 59
+    }
+  },
+  "seconds": 220.54234957695007,
+  "candidate": "models/model_dfd_b4_best.pt",
+  "active_model_changed": false
+}
